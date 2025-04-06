@@ -18,6 +18,7 @@ experiments/
 .DS_Store
 
 data/
+assets/
 
 .ruff_cache/
 

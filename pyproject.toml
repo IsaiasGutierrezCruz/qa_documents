@@ -11,6 +11,8 @@ dependencies = [
     "sentence-transformers>=4.0.1",
     "streamlit>=1.44.0",
     "llama-index>=0.12.28",
+    "annoy>=1.17.3",
+    "peft>=0.15.1",
 ]
 
 [project.optional-dependencies]
