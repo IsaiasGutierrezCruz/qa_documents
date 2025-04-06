@@ -1,0 +1,48 @@
+[project]
+name = "qa-documents"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "dotenv>=0.9.9",
+    "llama-index-node-parser-docling>=0.3.1",
+    "llama-index-readers-docling>=0.3.2",
+    "sentence-transformers>=4.0.1",
+    "streamlit>=1.44.0",
+    "llama-index>=0.12.28",
+]
+
+[project.optional-dependencies]
+dev = [
+    "jupyterlab>=4.3.6",
+]
+lint = [
+    "ruff>=0.11.2",
+]
+
+
+[tool.ruff]
+line-length = 90
+fix = true
+
+[tool.ruff.lint]
+preview = true
+explicit-preview-rules = true
+
+select = [
+  "ALL",
+]
+ignore = [
+  "TD003",
+  "TD004",
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["S101", "D103"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "numpy"
+
+[tool.ruff.format]
+docstring-code-format = true
