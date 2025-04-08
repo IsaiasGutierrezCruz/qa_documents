@@ -72,7 +72,7 @@ class MistralModel:
         def format_prompt(instruction: str, context: str) -> str:
             return f"""<s>[INST] {instruction} \n{context} \n[/INST]\n""" + "</s>"
         prompt = format_prompt(
-            instructions=self.instructions,
+            instruction=self.instructions,
             context=self.context_format.format(context_str=context, query_str=question),
         )
         inputs = self.tokenizer(prompt, return_tensors="pt")
